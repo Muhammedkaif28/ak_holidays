@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Your Trip | AK Holidays</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #f9f5f0, #fffaf4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .booking-card {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px 30px;
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+      max-width: 420px;
+      width: 100%;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .booking-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .booking-card h2 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: #222;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .form-group label {
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 6px;
+      display: block;
+      color: #555;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      font-size: 14px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      outline: none;
+      transition: border 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      border-color: #ffb703;
+    }
+
+    .book-btn {
+      width: 100%;
+      padding: 14px;
+      background: #ffb703;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .book-btn:hover {
+      background: #fb8500;
+    }
+
+    .nav {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .nav a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #444;
+      background: #fff3cd;
+      padding: 8px 14px;
+      border-radius: 8px;
+      transition: background 0.3s ease;
+    }
+
+    .nav a:hover {
+      background: #ffe8a1;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="nav">
+  <a href="teste222.html">🏠 Home</a>
+</div>
+
+<!-- Booking Form -->
+<div class="booking-card">
+  <h2>Book Your Dream Trip 🌴</h2>
+  <form>
+    <div class="form-group">
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required />
+    </div>
+    <div class="form-group">
+  <label>Your Location</label>
+  <input type="text" placeholder="City or Country" required />
+</div>
+
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="Enter your email" required />
+    </div>
+    <div class="form-group">
+      <label>Phone Number</label>
+      <input type="tel" placeholder="Enter your phone" required />
+    </div>
+<div class="form-group">
+  <label>Destination</label>
+  <input type="text" placeholder="Where do you want to go?" required />
+</div>
+
+    <div class="form-group">
+      <label>Travel Date</label>
+      <input type="date" required />
+    </div>
+    <button type="submit" class="book-btn">Book Now</button>
+  </form>
+</div>
+
+<form action="https://docs.google.com/forms/d/1YtRzFjeJu79uMtPw316rXVtBQKzVDOtwAVRioObzwVY/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+  <input name="entry.1234567890" placeholder="Full Name" required>
+  <input name="entry.9876543210" placeholder="Location" required>
+  <input name="entry.4567891234" type="email" placeholder="Email" required>
+  <input name="entry.6543219870" type="tel" placeholder="Phone" required>
+  <input name="entry.1478523690" placeholder="Destination" required>
+  <input name="entry.9638527410" type="date" required>
+  <button type="submit">Book Now</button>
+</form>
+
+<!-- Hidden Iframe -->
+<!-- <iframe name="hidden_iframe" style="display:none;"></iframe> -->
+
+
+
+</body>
+</html>

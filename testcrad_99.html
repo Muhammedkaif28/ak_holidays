@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AK Holidays</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ak-orange: #e09706;
+      --ak-cream: #f9f5ef;
+      --ak-dark: #2c2c2c;
+      --ak-light-brown: #fff3d6;
+      --ak-white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, var(--ak-cream), var(--ak-orange));
+      color: var(--ak-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(to bottom, #eeece9, #e09706);
+      padding: 16px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: white;
+    }
+
+    header img {
+      height: 70px;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    nav:hover {
+      background: linear-gradient(270deg, #fff1f2, #ffe9c8, #e4ffd6, #d6faff, #d9e6ff, #e5e0ff);
+      background-size: 600% 600%;
+      animation: gradientShift 10s ease infinite;
+      border-radius: 8px;
+      padding: 6px 10px;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .hero {
+      background: url('img/shifaaz-shamoon-Rl9l9mL6Pvs-unsplash.jpg') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      position: relative;
+      color: white;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeInUp 1.2s ease;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #fefae0;
+      margin-bottom: 25px;
+    }
+
+    .hero-btn {
+      background: var(--ak-orange);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .hero-btn:hover {
+      background: #b87902;
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 40px 20px;
+      background-color: var(--ak-cream);
+    }
+
+    .card {
+      background: var(--ak-white);
+      border-left: 5px solid var(--ak-orange);
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: var(--ak-orange);
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    footer {
+      background: var(--ak-dark);
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+    }
+
+    @media screen and (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img/aklogo.jpg" alt="AK Holidays Logo">
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Destinations</a>
+      <a href="#">Packages</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Your Trusted Holiday Planner</h1>
+      <p>Explore dream destinations with tailored tour packages, visa assistance, and travel bookings.</p>
+      <a class="hero-btn" href="#">Get Started</a>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card">
+      <h3>International Tours</h3>
+      <p>Plan your next overseas adventure with our expert visa & travel services.</p>
+    </div>
+    <div class="card">
+      <h3>Domestic Getaways</h3>
+      <p>Discover India like never before – customized packages for every traveler.</p>
+    </div>
+    <div class="card">
+      <h3>Flight & Hotel Booking</h3>
+      <p>Best deals on flights and premium stays, handpicked for you.</p>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 AK Holidays. All rights reserved.
+  </footer>
+
+</body>
+</html>
