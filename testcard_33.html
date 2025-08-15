@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Popular Destinations</title>
+  <link rel="stylesheet" href="style2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f9f9f9, #f0f0f0);
+      padding: 40px;
+      color: #333;
+    }
+
+    .title {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      color: #444;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 280px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .info h3 {
+      font-size: 1.3em;
+      color: #222;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .popup-inner {
+      background: white;
+      border-radius: 20px;
+      display: flex;
+      overflow: hidden;
+      width: 80%;
+      max-width: 900px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .popup-left, .popup-right {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .popup-left img {
+      width: 100%;
+      height: 100%;
+      border-radius: 15px;
+      object-fit: cover;
+    }
+
+    .popup-right h2 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    .popup-right p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: #eee;
+      border-radius: 20px;
+      padding: 5px 15px;
+      margin: 5px 10px 10px 0;
+      font-size: 0.9em;
+    }
+
+    .popup-buttons button {
+      padding: 10px 20px;
+      margin: 10px 10px 0 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .choose-btn {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .choose-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .next-btn {
+      background-color: #e2e2e2;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      font-size: 2em;
+      color: #666;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="title">Popular Destinations</h2>
+  <div class="card-container">
+    <div class="card" onclick="showDetails('Dubai', 'car_img/Dubai.jpg', 'Dubai is famous for luxury shopping, ultramodern architecture, and vibrant nightlife.')">
+      <img src="car_img/Dubai.jpg" alt="Dubai">
+      <div class="info"><h3>Dubai</h3></div>
+    </div>
+    <div class="card" onclick="showDetails('Maldives', 'car_img/Maldives.jpg', 'Crystal-clear waters, coral reefs, and overwater bungalows.')">
+      <img src="car_img/Maldives.jpg" alt="Maldives">
+      <div class="info"><h3>Maldives</h3></div>
+    </div>
+    <div class="card" onclick="showDetails('Europe', 'car_img/Paris.jpg', 'Explore rich history from Paris to Rome with culture and cuisine.')">
+      <img src="car_img/Paris.jpg" alt="Europe">
+      <div class="info"><h3>Europe</h3></div>
+    </div>
+    <div class="card" onclick="showDetails('Thailand', 'car_img/Thaliand.jpg', 'Exotic beaches, vibrant nightlife, cultural temples.')">
+      <img src="car_img/Thaliand.jpg" alt="Thailand">
+      <div class="info"><h3>Thailand</h3></div>
+    </div>
+    <div class="card" onclick="showDetails('Kashmir', 'car_img/Kashmir.jpg', 'Snow-capped mountains, houseboats, and lush valleys.')">
+      <img src="car_img/Kashmir.jpg" alt="Kashmir">
+      <div class="info"><h3>Kashmir</h3></div>
+    </div>
+  </div>
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <div class="popup-inner">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <div class="popup-left">
+        <img id="popup-img" src="" alt="">
+      </div>
+      <div class="popup-right">
+        <h2 id="popup-title">Title</h2>
+        <p id="popup-desc">Description...</p>
+        <div class="tags">
+          <span>Relaxing</span>
+          <span>Scenic</span>
+          <span>Luxury</span>
+        </div>
+        <div class="popup-buttons">
+          <button class="choose-btn" onclick="window.location.href='testb.html'">Book Now</button>
+          <button class="next-btn" onclick="alert('More destinations soon!')">Next Destination</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showDetails(title, img, desc) {
+      document.getElementById('popup-img').src = img;
+      document.getElementById('popup-title').innerText = title;
+      document.getElementById('popup-desc').innerText = desc;
+      document.getElementById('popup').style.display = 'flex';
+    }
+    function closePopup() {
+      document.getElementById('popup').style.display = 'none';
+    }
+  </script>
+</body>
+</html>

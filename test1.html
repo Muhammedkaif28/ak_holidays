@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AK Holidays - Trusted travel agency in Gandhinagar offering domestic & international tours, visa assistance, MEA apostille, and hotel & flight booking.">
+    <meta name="keywords" content="AK Holidays Gandhinagar, travel agency Gandhinagar, tour packages, visa assistance, MEA apostille, hotel booking, flight booking, Dubai tours, Maldives tours">
+    <meta name="author" content="AK Holidays">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="AK Holidays - Travel Agency in Gandhinagar">
+    <meta property="og:description" content="Explore domestic & international tour packages with AK Holidays. Get visa support, flight booking, hotel booking, and MEA apostille services.">
+    <meta property="og:image" content="images/aklogo-removebg-preview.png">
+    <meta property="og:url" content="https://akhollidays.com">
+    <meta property="og:type" content="website">
+
+    <title>AK Holidays - Best Travel Agency in Gandhinagar</title>
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f0f4f8, #d9e4ec);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        header img {
+            height: 90px;
+        }
+
+        .header-text {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+        }
+
+        .header-text h1 {
+            margin: 0;
+        }
+
+        .header-buttons a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-left: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: background 0.3s ease;
+        }
+
+.whatsapp-btn {
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #25D366, #1ebe5d);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.insta-btn {
+    background-color: transparent; 
+    border: none;
+    cursor: pointer;
+    background-image: linear-gradient(45deg, #fd1d1d, #e1306c, #f77737);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Force icon sizes */
+.whatsapp-btn i,
+.insta-btn i,
+.call-btn i {
+    font-size: 25px !important;
+}
+
+
+        /* Optional: Add spacing between icons */
+        button {
+            margin: 10px;
+        }
+
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(270deg, #ffe5ec, #ffd6a5, #caffbf, #9bf6ff, #a0c4ff, #bdb2ff);
+    background-size: 600% 600%;
+    padding: 1px;
+    animation: gradientShift 12s ease infinite;
+    transition: background 0.4s ease;
+    border-radius: 6px;
+}
+
+/* Keyframes for gradient animation */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Hover effect */
+nav:hover {
+    background: linear-gradient(270deg, #fff1f2, #ffe9c8, #e4ffd6, #d6faff, #d9e6ff, #e5e0ff);
+    background-size: 600% 600%;
+    animation: gradientShift 10s ease infinite;
+}
+
+/* Nav links */
+nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: color 0.3s ease, background 0.3s ease;
+    font-weight: 600;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover { color: #ffd60a; }
+
+        section { padding: 40px 20px; text-align: center; }
+        h2 {
+            font-size: 28px;
+            color: #023e8a;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .cta {
+            background: #90e0ef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .services, .destinations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px 20px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card i {
+            margin-bottom: 10px;
+            font-size: 30px;
+            color: #0077b6;
+        }
+
+        .card h3 {
+            color: #0077b6;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #0077b6;
+            color: white;
+            text-align: center;
+            padding: 15px 10px;
+        }
+
+        .contact-section {
+            padding: 20px 15px;
+            text-align: center;
+            background: linear-gradient(145deg, #0077b6, #0096c7);
+            border-radius: 12px;
+            max-width: 400px;
+            margin: 40px auto;
+            color: white;
+        }
+
+        .contact-card-single {
+            background: white;
+            color: #023e8a;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .contact-card-single i {
+            font-size: 20px;
+            color: #0077b6;
+            margin-right: 10px;
+        }
+
+        .contact-card-single p {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-card-single a {
+            color: #0077b6;
+            text-decoration: none;
+        }
+
+        /* Map & About Section */
+        .map-about-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 40px auto;
+            max-width: 1100px;
+            padding: 20px;
+        }
+
+        .map-card, .about-card {
+            background: #ffffff;
+            border: 3px solid #0077b6;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            flex: 1 1 45%;
+            min-width: 300px;
+        }
+
+        .map-card iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 10px;
+        }
+
+.contact-why-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;  /* Both cards start at the same top position */
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.contact-section, .why-choose {
+    flex: 1 1 45%;
+    min-width: 300px;
+    background: #ffffff;
+    border: 3px solid #0077b6;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.why-choose ul {
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.why-choose li {
+    margin: 10px 0;
+}
+        /* Floating WhatsApp & Instagram */
+        .floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+        .floating-btn a img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .whatsapp-btn { background-color: #25D366; }
+        .whatsapp-btn:hover { background-color: #1ebe5d; }
+        .insta-btn { background-color: #e4405f; }
+        .insta-btn:hover { background-color: #d12d4b; }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="images/aklogo-removebg-preview.png" alt="AK Holidays Logo">
+        <div class="header-buttons">
+            <a href="tel:+919558887506" class="btn call-btn" title="Call Us">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="https://wa.me/919558887506" target="_blank" class="btn whatsapp-btn" title="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://instagram.com/ak.holidays16" target="_blank" class="btn insta-btn" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </header>
+    
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="#services">Services</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- CTA -->
+    <section class="cta">
+        <h2>Plan Your Dream Vacation Today!</h2>
+        <p>We offer domestic & international tours, visa support, flight and hotel booking at the best prices.</p>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+
+            <div class="card">
+                <i class="fas fa-file-signature"></i>
+                <h3>Document Attestation</h3>
+                <p>Reliable attestation services for educational, personal, and commercial documents.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-plane-departure"></i>
+                <h3>Tour Packages</h3>
+                <p>Explore top destinations across India and around the world with customized itineraries.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-passport"></i>
+                <h3>Visa Assistance</h3>
+                <p>End-to-end visa services for countries like USA, UK, UAE, Canada, and Europe.</p>
+            </div>
+            <div class="card">
+                <i class="fas fa-hotel"></i>
+                <h3>Flight & Hotel Booking</h3>
+                <p>We offer the best deals on air tickets and hotel bookings, tailored to your budget.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations">
+        <h2>Popular Destinations</h2>
+        <div class="destinations">
+            <div class="card">
+                <h3>Dubai</h3>
+                <p>Discover luxury shopping, desert safaris, Burj Khalifa, and world-class entertainment.</p>
+            </div>
+            <div class="card">
+                <h3>Maldives</h3>
+                <p>Experience white sandy beaches, overwater villas, and crystal-clear waters.</p>
+            </div>
+            <div class="card">
+                <h3>Europe</h3>
+                <p>Explore Paris, Rome, London, and other iconic cities with our exclusive Europe tours.</p>
+            </div>
+            <div class="card">
+                <h3>Thailand</h3>
+                <p>Enjoy exotic beaches, temples, and vibrant nightlife in Thailand.</p>
+            </div>
+            <div class="card">
+                <h3>Kashmir</h3>
+                <p>Discover the beauty of snow-capped mountains and serene landscapes in Kashmir.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map and About -->
+    <section class="map-about-container" id="about">
+        <div class="map-card">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.660301791906!2d72.57051457502641!3d23.02623247917125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e84f27e2f1f87%3A0x3d3c1e68f3a4a34c!2sSakar%207%2C%20Ashram%20Rd%2C%20Ellisbridge%2C%20Ahmedabad%2C%20Gujarat%20380009!5e0!3m2!1sen!2sin!4v1723196205146!5m2!1sen!2sin"
+                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="about-card">
+            <h2>About AK Holidays</h2> 
+            <p>AK Holidays is a leading travel agency based in Gandhinagar, Gujarat. We specialize in creating memorable travel experiences for individuals, families, and groups.</p>
+            <p>With years of expertise, our team ensures the best tours, bookings, and assistance tailored to your preferences.</p>
+            <p>We make travel easy and enjoyable, taking care of everything from start to finish.</p>
+
+        </div>
+    </section>
+
+<!-- Contact & Why Choose Section -->
+<!-- Contact & Why Choose Section -->
+<div class="contact-why-container">
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <div class="contact-card-single">
+            <p><i class="fas fa-envelope"></i><a href="mailto:akholidays@example.com"> akholidays@example.com</a></p>
+            <p><i class="fas fa-phone"></i><a href="tel:+919558887506"> +91-9558887506</a></p>
+            <p><i class="fas fa-map-marker-alt"></i> A-126, 1st Floor, Sakar-7, Ashram Road, Ahmedabad, Gujarat, India</p>
+        </div>
+    </section>
+
+    <section class="why-choose">
+        <h2>Why Choose AK Holidays?</h2>
+        <ul>
+            <li>✔ Hassle-free booking and visa support</li>
+            <li>✔ Affordable and customized travel packages</li>
+            <li>✔ 24/7 customer support for a smooth journey</li>
+            <li>✔ Trusted by hundreds of happy travelers</li>
+        </ul>
+    </section>
+</div>
+
+
+</section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 AK Holidays. All Rights Reserved.</p>
+        <a href="https://instagram.com/ak.holidays16" target="_blank" style="color:white;">Follow us on Instagram</a>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="floating-btn">
+        <a href="https://wa.me/919558887506" target="_blank">
+            <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="Chat on WhatsApp"/>
+        </a>
+        <a href="https://instagram.com/ak.holidays16" target="_blank">
+            <img src="https://img.icons8.com/fluency/48/000000/instagram-new.png" alt="Follow on Instagram"/>
+        </a>
+    </div>
+    
+</body>
+</html>
