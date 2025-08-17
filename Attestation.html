@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MEA Attestation & Apostille Services | AK Holidays</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: #f0f4f8;
+      color: #333;
+    }
+
+    header {
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 16px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #e09706;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #e09706;
+    }
+/* 
+    .hero {
+      background: linear-gradient(135deg, #ffb703, #faa307);
+      text-align: center;
+      padding: 5px 20px;
+      color: #1d1f2f;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1rem;
+    } */
+
+/* .hero {
+  background: linear-gradient(120deg, #ffb703, #faa307);
+  text-align: center;
+  padding: 16px 20px;
+  color: #1d1f2f;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.hero:hover::before {
+  left: 100%;
+}
+
+.hero h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  position: relative;
+  display: inline-block;
+}
+
+.hero h1::after {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 0;
+  background: #1d1f2f;
+  transition: width 0.3s ease;
+  margin: 4px auto 0;
+}
+
+.hero h1:hover::after {
+  width: 100%;
+}
+
+.hero p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+} */
+.hero {
+  position: relative;
+  padding: 40px 50px;
+  max-width: 800px;
+  margin: 40px auto;
+  background: rgba(255, 183, 3, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 8px 40px rgba(255, 183, 3, 0.3);
+  text-align: center;
+  color: #1d1f2f;
+  overflow: visible;
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+  cursor: default;
+  user-select: none;
+}
+
+.hero:hover {
+  box-shadow:
+    0 0 15px #ffb703,
+    0 0 25px #faa307,
+    0 0 35px #ffb703,
+    0 0 60px #faa307;
+  transform: translateY(-6px);
+}
+
+/* Background layered cards */
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  border-radius: 20px;
+  filter: blur(25px);
+  z-index: -1;
+}
+
+.hero::before {
+  width: 300px;
+  height: 300px;
+  background: #ffb703;
+  top: -60px;
+  left: -80px;
+  opacity: 0.4;
+}
+
+.hero::after {
+  width: 250px;
+  height: 250px;
+  background: #faa307;
+  bottom: -60px;
+  right: -70px;
+  opacity: 0.3;
+}
+
+/* Heading */
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 2.8rem;
+  letter-spacing: 1.2px;
+  margin-bottom: 12px;
+  text-shadow:
+    0 2px 6px rgba(29, 31, 47, 0.25),
+    0 4px 15px rgba(29, 31, 47, 0.2);
+  position: relative;
+  display: inline-block;
+  color: #1d1f2f;
+  transition: color 0.3s ease;
+}
+
+.hero h1:hover {
+  color: #faa307;
+  text-shadow:
+    0 0 12px #ffb703,
+    0 0 25px #faa307,
+    0 0 45px #ffb703;
+}
+
+/* Underline animation on hover */
+.hero h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: linear-gradient(90deg, #ffb703, #faa307);
+  border-radius: 4px;
+  margin: 10px auto 0;
+  transition: width 0.4s ease;
+}
+
+.hero h1:hover::after {
+  width: 100%;
+}
+
+/* Paragraph */
+.hero p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 25px;
+  opacity: 0.9;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
+  position: relative;
+  color: #1d1f2f;
+  text-shadow: 0 1px 2px rgba(255 255 255 / 0.8);
+  cursor: default;
+  user-select: none;
+}
+
+/* Animated underline for paragraph on hover */
+.hero p:hover {
+  text-decoration: underline wavy #ffb703;
+  text-decoration-thickness: 2.5px;
+  transition: text-decoration-color 0.3s ease;
+}
+
+/* Glassmorphism Button */
+.hero .btn {
+  position: relative;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50px;
+  padding: 14px 40px;
+  font-weight: 700;
+  color: #1d1f2f;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 1.3px;
+  border: 2px solid rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 25px rgba(255, 183, 3, 0.5);
+  cursor: pointer;
+  overflow: hidden;
+  transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+  user-select: none;
+}
+
+.hero .btn:hover {
+  background: rgba(255, 183, 3, 0.85);
+  color: #1d1f2f;
+  border-color: #ffb703;
+  box-shadow: 0 12px 35px #ffb703;
+}
+
+/* Ripple effect on button click */
+.hero .btn::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  top: 50%;
+  left: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  z-index: 1;
+}
+
+.hero .btn:active::after {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .hero {
+    padding: 30px 20px;
+    max-width: 95%;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .hero .btn {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
+
+
+
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      color: #e09706;
+      margin-bottom: 15px;
+    }
+
+    ul, ol {
+      margin: 10px 0 20px 20px;
+    }
+
+    ul li, ol li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: #fff3cd;
+      border-left: 4px solid #e09706;
+      padding: 15px;
+      margin: 20px 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .cta a {
+      background: #e09706;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background .3s;
+    }
+
+    .cta a:hover {
+      background: #cf8c05;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1d1f2f;
+      color: #fff;
+      font-size: .9rem;
+    }
+
+
+    .section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+.section h2 {
+  margin-bottom: 15px;
+  font-size: 28px;
+  color: #e09706;
+}
+.section p {
+  margin-bottom: 10px;
+  text-align: justify;
+}
+    .section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+      line-height: 1.7;
+      color: #333;
+    }
+    .section h2 {
+      margin-bottom: 15px;
+      font-size: 28px;
+      color: #e09706;
+    }
+    
+    .cta a {
+      background: #e09706;
+      color: #fff;
+      padding: 14px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: background .3s;
+    }
+    .cta a:hover {
+      background: #cf8c05;
+    }
+.section {
+  background: linear-gradient(to bottom, #eeece9, #f3c76e);
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.section h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.section table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.section table th {
+  background-color: #e09706;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+.section table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.section table tr:nth-child(even) td {
+  background-color: #f9f5ef;
+}
+.poPular-main {
+  padding: 8px;
+  flex: 1 1 23%;
+  max-width: 23%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .poPular-main {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 768px) {
+  .poPular-main {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 480px) {
+  .poPular-main {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.worldWideVisaservices-content {
+  background: linear-gradient(to bottom right, #fff8e1, #ffe0b2);
+  border-radius: 14px;
+  padding: 20px 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.worldWideVisaservices-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  border-color: #e09706;
+  background: #fff3e0;
+}
+
+.worldWideVisaservices-content img {
+  width: 60px;
+  height: 45px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+}
+
+.worldWideVisaservices-content:hover img {
+  transform: scale(1.08);
+}
+
+.worldWideVisaservices-content h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+
+
+
+
+  </style>
+
+  
+</head>
+
+<body>
+
+<!-- Navigation Header -->
+<header>
+  <div class="logo">
+    <img src="images/aklogo-removebg-preview.png" alt="AK Holidays Logo" style="height: 50px;">
+  </div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="mainhome.html">Home</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>MEA Attestation</h1>
+    <p>Document legalisation made simple with AK Holidays</p>
+  </section>
+
+
+  <div class="section">
+  <h2>What is MEA Attestation?</h2>
+
+  <p>
+    MEA Attestation refers to the official process of validating documents by the <strong>Ministry of External Affairs (MEA), Government of India</strong>. It is a mandatory step for documents issued in India to be legally recognized both within the country and abroad. Depending on the destination country and purpose, the MEA either affixes an <strong>Attestation Stamp</strong> or issues an <strong>Apostille</strong>.
+  </p>
+
+  <p>
+    The MEA is the apex governmental body responsible for handling India's international diplomatic affairs. When it comes to document attestation, MEA plays a critical role in verifying the authenticity of educational, personal, and commercial documents. This verification is often required for international travel, employment, education, or business purposes abroad.
+  </p>
+
+  <p>
+    Since <strong>March 1, 2012</strong>, the MEA has outsourced the submission and collection process for attestation and apostille services to authorized service providers. As a result, individuals can no longer directly submit documents at the MEA's CPV Division, Patiala House, New Delhi. Instead, applicants must submit their original documents, along with photocopies and a valid passport copy, to officially designated agencies.
+  </p>
+
+  <p>
+    <!-- We are proud to share that <strong>Superb Enterprises Private Limited (SEPL)</strong> has been empanelled once again by the MEA, effective from <strong>1st February 2023</strong>, as an authorized service provider for attestation and apostille services in Delhi and other major cities across India. Our role is to ensure your documents are securely collected, processed, and forwarded to the MEA for final verification. -->
+  </p>
+
+  <p>
+    At <strong>AK Holidays</strong>, we simplify the entire attestation process for you — offering safe, fast, and reliable handling of your documents, whether for study abroad, job applications, visa processes, or international business ventures.
+  </p>
+</div>
+
+
+  <!-- <p>
+    At <strong>AK Holidays</strong>, we streamline the entire process to ensure safe, quick, and reliable handling of your documents.
+  </p> -->
+   <div class="section">
+    <h2>Why Is MEA Attestation Required?</h2>
+    <p>The MEA ensures that your educational, personal, and commercial documents are genuine and admissible abroad. This verification is often mandatory for:</p>
+    <ul>
+      <li>Education or Job Applications</li>
+      <li>Visa and Migration Formalities</li>
+      <li>Opening a Business Overseas</li>
+      <li>Dependent or Residence Permits</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>When Do You Need It?</h2>
+    <ul>
+      <li>Enrolling in universities overseas</li>
+      <li>Applying for work or internships abroad</li>
+      <li>Securing family/residence visas</li>
+      <li>Setting up or expanding business internationally</li>
+    </ul>
+  </div>
+
+  <!-- <div class="section">
+    <h2>Documents We Handle</h2>
+    <ul>
+      <li><strong>Educational:</strong> Degrees, diplomas, and mark sheets</li>
+      <li><strong>Personal:</strong> Birth, marriage, and police clearance certificates</li>
+      <li><strong>Commercial:</strong> Business registrations, export documents, etc.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Our Attestation Process</h2>
+    <ol>
+      <li><strong>State Verification:</strong> Done by HRD/Home Department</li>
+      <li><strong>MEA Apostille:</strong> Document is apostilled by the Ministry</li>
+      <li><strong>Embassy Legalization (if required):</strong> Some countries need additional verification</li>
+    </ol>
+  </div> -->
+
+  <div class="section highlight">
+    <p>At AK Holidays, our expert team ensures smooth documentation and compliance, giving you peace of mind as you prepare for your global journey.</p>
+  </div>
+ <div class="section">
+    <!-- <h2>What Is MEA Attestation?</h2>
+    <p>MEA Attestation refers to the official authentication process performed by the <strong>Ministry of External Affairs (MEA), Government of India</strong>. This attestation is necessary for documents issued in India to be legally recognized both domestically and internationally. Depending on the destination country and purpose of use, the MEA either provides a <strong>General Attestation Stamp</strong> or an <strong>Apostille</strong>.</p> -->
+
+    <!-- <h2>Why Is MEA Attestation Required?</h2>
+    <p>The MEA ensures that your educational, personal, and commercial documents are genuine and admissible abroad. This verification is often mandatory for:</p>
+    <ul>
+      <li>Education or Job Applications</li>
+      <li>Visa and Migration Formalities</li>
+      <li>Opening a Business Overseas</li>
+      <li>Dependent or Residence Permits</li>
+    </ul> -->
+
+    <h2>Submission Process</h2>
+    <p>As of <strong>March 1, 2012</strong>, the MEA has outsourced the submission and collection services for attestation/apostille. Individuals must submit original documents, photocopies, and passport copies through MEA-authorized agencies.</p>
+
+    <!-- <h2>Our Empanelment & Role</h2> -->
+    <!-- <p><strong>Superb Enterprises Private Limited (SEPL)</strong> has been reauthorized by the MEA from <strong>1st February 2023</strong>. We are an <strong>official MEA-approved service provider</strong> across Delhi and major cities in India. Our services include secure collection, coordination, and submission of documents for final MEA attestation.</p> -->
+
+    <h2>Types of Documents That Require Attestation</h2>
+    <h3>Educational Records</h3>
+    <ul>
+      <li>Degree Certificates, Mark Sheets</li>
+      <li>Diplomas, Transfer Certificates, Nursing Certificates</li>
+    </ul>
+
+    <h3>Personal Documents</h3>
+    <ul>
+      <li>Birth, Marriage, Death Certificates</li>
+      <li>Divorce Decrees, Police Clearance Certificates</li>
+    </ul>
+
+    <h3>Commercial Documents</h3>
+    <ul>
+      <li>Power of Attorney, Export & Import Papers</li>
+      <li>Certificate of Incorporation, MOA</li>
+      <li>Invoices and Business Documents</li>
+    </ul>
+
+    <h2>Step-by-Step Attestation Procedure</h2>
+    <ol>
+      <li><strong>State-Level Attestation</strong> – Verified by respective State Departments.</li>
+      <li><strong>MEA Attestation</strong> – MEA affixes attestation seal or Apostille stamp.</li>
+      <li><strong>Embassy Attestation</strong> (if needed) – For non-Hague Convention countries.</li>
+    </ol>
+
+<div class="section">
+  <h2>General Attestation vs. Apostille</h2>
+  <table>
+    <tr>
+      <th>Feature</th>
+      <th>MEA General Attestation</th>
+      <th>MEA Apostille</th>
+    </tr>
+    <tr>
+      <td>Applicable Countries</td>
+      <td>Non-Hague Convention countries</td>
+      <td>Hague Convention countries</td>
+    </tr>
+    <tr>
+      <td>Verification</td>
+      <td>Stamped by MEA and respective embassies</td>
+      <td>Single Apostille stamp by MEA</td>
+    </tr>
+    <tr>
+      <td>Usage</td>
+      <td>Work visa, business abroad, etc.</td>
+      <td>Education, personal use, etc.</td>
+    </tr>
+  </table>
+
+  
+</div>
+
+    <h2>Countries Requiring MEA Attestation</h2>
+    <!-- <p>Examples include: UAE, Qatar, Kuwait, Saudi Arabia, Algeria, Brazil, Egypt, Libya, Malaysia, Philippines, Angola, China, Vietnam, Italy, Bahrain, and more.</p> -->
+
+<div class="row" style="margin: 30px 0 60px;">
+  <!-- UAE -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="uae-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/uae.png" class="img-fluid" alt="UAE Flag">
+        <h4>UAE</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Qatar -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="qatar-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/qatar.png" class="img-fluid" alt="Qatar Flag">
+        <h4>Qatar</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Kuwait -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="kuwait-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/kuwait.png" class="img-fluid" alt="Kuwait Flag">
+        <h4>Kuwait</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Saudi Arabia -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="saudi-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/saudi-arabia.png" class="img-fluid" alt="Saudi Arabia Flag">
+        <h4>Saudi Arabia</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Algeria -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="algeria-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/algeria.jpg" class="img-fluid" alt="Algeria Flag">
+        <h4>Algeria</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Brazil -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="brazil-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/brazil.png" class="img-fluid" alt="Brazil Flag">
+        <h4>Brazil</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Egypt -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="egypt-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/egypt.png" class="img-fluid" alt="Egypt Flag">
+        <h4>Egypt</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Libya -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="libya-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/libya.png" class="img-fluid" alt="Libya Flag">
+        <h4>Libya</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Malaysia -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="malaysia-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/malaysia.png" class="img-fluid" alt="Malaysia Flag">
+        <h4>Malaysia</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Philippines -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="philippines-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/philippines.png" class="img-fluid" alt="Philippines Flag">
+        <h4>Philippines</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Angola -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="angola-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/angola.jpg" class="img-fluid" alt="Angola Flag">
+        <h4>Angola</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- China -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="china-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/china.png" class="img-fluid" alt="China Flag">
+        <h4>China</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Vietnam -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="vietnam-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/vietnam-flag-png-large.png" class="img-fluid" alt="Vietnam Flag">
+        <h4>Vietnam</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Italy -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="italy-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/italy-.png" class="img-fluid" alt="Italy Flag">
+        <h4>Italy</h4>
+      </div>
+    </a>
+  </div>
+
+  <!-- Bahrain -->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 poPular-main">
+    <a href="bahrain-visa.html">
+      <div class="worldWideVisaservices-content text-center">
+        <img src="images/bahrain.jpg" class="img-fluid" alt="Bahrain Flag">
+        <h4>Bahrain</h4>
+      </div>
+    </a>
+  </div>
+</div>
+
+
+
+    <h2>Frequently Asked Questions</h2>
+    <h3>What is MEA Attestation?</h3>
+    <p>Government authentication of your documents, required for jobs, education, and visas abroad.</p>
+
+    <h3>What documents are required?</h3>
+    <p>Original document(s) and a copy of your passport.</p>
+
+    <h3>How to apply through us?</h3>
+    <p>Submit your documents to our authorized team. We handle verification, MEA submission, and embassy attestation if needed.</p>
+
+    <h3>Timeline & Cost?</h3>
+    <p>Depends on document type, issuing state, and destination country.</p>
+<!-- 
+    <h3>Why choose us?</h3>
+    <p>We are officially MEA-empanelled, with secure processing, tracking, and support across 20+ Indian cities.</p> -->
+  </div>
+
+  <div class="section">
+    <h2>Why Choose AK Holidays?</h2>
+    <ul>
+      <li>End-to-end service with pickup & delivery</li>
+      <li>Online tracking & timely updates</li>
+      <li>Years of experience in document legalisation</li>
+      <li>Translation & embassy submission support</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Where We Operate</h2>
+    <p>We offer services across all our Gujarat</p>
+    <!-- <p>We offer services across India—Delhi, Mumbai, Bengaluru, Hyderabad, Chennai, and Kochi. NRI customers from Gulf countries are also served through our extended support team.</p> -->
+  </div>
+
+
+
+<!-- START: Centered CTA Card -->
+<div class="cta-card">
+  <a href="https://wa.me/919558887506" target="_blank" class="cta-button">
+    <i class="fab fa-whatsapp"></i>
+    Chat on WhatsApp
+  </a>
+</div>
+
+<style>
+  /* CTA Card Container */
+  .cta-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    margin: 50px auto;
+    max-width: 500px; /* card width */
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    text-align: center;
+  }
+
+  /* CTA Button */
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #25D366;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 16px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .cta-button i {
+    font-size: 22px;
+  }
+
+  /* Hover Effect */
+  .cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.3);
+  }
+
+  /* Responsive for small screens */
+  @media (max-width: 480px) {
+    .cta-card {
+      padding: 30px 20px;
+    }
+    .cta-button {
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+  }
+</style>
+
+  <footer>
+    &copy; 2025 AK Holidays. All rights reserved. Trusted experts in MEA Apostille and global documentation.
+  </footer>
+
+
+
+
+
+</body>
+</html>
